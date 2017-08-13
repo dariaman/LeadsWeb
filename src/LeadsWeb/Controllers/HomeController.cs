@@ -30,8 +30,16 @@ namespace LeadsWeb.Controllers
                            Email=c.Email,
                            RContact_DayTime=c.RContact_DayTime,
                            RContact_Destination=c.RContact_Destination,
+                           product_description=c.product_description,
+                           Address=c.Address,
+                           RContact_Remark1=c.RContact_Remark1,
+                           RContact_Remark2=c.RContact_Remark2,
+                           IsReject=c.IsReject,
+                           RejectReason=c.RejectReason,
+                           IsSent=c.IsSent,
+                           ReturnSent=c.ReturnSent,
                            RContact_CreatedDate=c.RContact_CreatedDate
-                       }).ToList();
+                       }).FirstOrDefault();
             return View(contac);
         }
 

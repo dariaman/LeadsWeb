@@ -48,6 +48,7 @@ namespace LeadsWeb
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.AddMvcGrid();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
@@ -71,6 +72,7 @@ namespace LeadsWeb
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseMvcWithDefaultRoute();
             app.UseStaticFiles();
 
             app.UseIdentity();
