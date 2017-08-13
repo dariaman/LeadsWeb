@@ -18,7 +18,8 @@ namespace LeadsWeb.Controllers
 
         public IActionResult Index()
         {
-            ContactLeadsVM contac = new ContactLeadsVM();
+            IEnumerable<ContactLeadsVM> contac;
+            //ContactLeadsVM contac = new ContactLeadsVM();
             contac = ( from c in _context.ContactLeadsModel
                        select new ContactLeadsVM()
                        {
@@ -37,9 +38,9 @@ namespace LeadsWeb.Controllers
                            IsReject=c.IsReject,
                            RejectReason=c.RejectReason,
                            IsSent=c.IsSent,
-                           ReturnSent=c.ReturnSent,
+                           ReturnSent=c.ReturnSent.Substring(0,50),
                            RContact_CreatedDate=c.RContact_CreatedDate
-                       }).FirstOrDefault();
+                       });
             return View(contac);
         }
 

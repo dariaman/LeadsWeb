@@ -1,5 +1,5 @@
 ﻿@using NonFactors.Mvc.Grid;
-@model LeadsWeb.ViewModels.ContactLeadsVM
+@model IEnumerable<LeadsWeb.ViewModels.ContactLeadsVM>
 
 @{
     ViewData["Title"] = "Leads";
@@ -16,13 +16,23 @@
         columns.Add(model => model.Name).Titled("Name");
         columns.Add(model => model.Gender).Titled("Gender");
         columns.Add(model => model.DOB).Titled("DOB").Filterable(false);
+        columns.Add(model => model.RContact_DayTime).Titled("DayTime");
+        columns.Add(model => model.RContact_Destination).Titled("Destination");
+        columns.Add(model => model.product_description).Titled("Product");
+        columns.Add(model => model.RContact_Remark1).Titled("Remark1");
+        columns.Add(model => model.RContact_Remark2).Titled("Remark2");
+        columns.Add(model => model.IsReject).Titled("IsReject");
+        columns.Add(model => model.RejectReason).Titled("RejectReason");
+        columns.Add(model => model.RContact_CreatedDate).Titled("CreatedDate");
+        columns.Add(model => model.IsSent).Titled("IsSent");
+        columns.Add(model => model.ReturnSent).Titled("ResultSent");
     }).Empty("No data found")
     .Pageable(pager =>
     {
         pager.PagesToDisplay = 10;
         pager.RowsPerPage = 10;
     })
-    .Sortable()
+    //.Sortable()
     .Filterable()
     .Css("table-hover")
 )

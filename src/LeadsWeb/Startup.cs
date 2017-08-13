@@ -13,6 +13,7 @@ using LeadsWeb.Data;
 using LeadsWeb.Models;
 using LeadsWeb.Services;
 using MySQL.Data.Entity.Extensions;
+using NonFactors.Mvc.Grid;
 
 namespace LeadsWeb
 {
@@ -25,11 +26,11 @@ namespace LeadsWeb
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
-            if (env.IsDevelopment())
-            {
+            //if (env.IsDevelopment())
+            //{
                 // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
-                builder.AddUserSecrets();
-            }
+                builder.AddUserSecrets("dariaman46@");
+            //}
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
@@ -48,8 +49,10 @@ namespace LeadsWeb
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.AddMvcCore().AddViewLocalization();
             services.AddMvcGrid();
 
+            //services.AddDistributedMemoryCache();
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
@@ -61,21 +64,21 @@ namespace LeadsWeb
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
+            //if (env.IsDevelopment())
+            //{
+                //app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
                 app.UseBrowserLink();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
+            //}
+            //else
+            //{
+            //    app.UseExceptionHandler("/Home/Error");
+            //}
 
             app.UseMvcWithDefaultRoute();
             app.UseStaticFiles();
-
             app.UseIdentity();
+            app.UseDeveloperExceptionPage();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
 

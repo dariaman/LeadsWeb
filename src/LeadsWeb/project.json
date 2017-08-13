@@ -19,11 +19,6 @@
     "Microsoft.AspNetCore.Server.IISIntegration": "1.1.2",
     "Microsoft.AspNetCore.Server.Kestrel": "1.1.2",
     "Microsoft.AspNetCore.StaticFiles": "1.1.2",
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.2",
-    "Microsoft.EntityFrameworkCore.SqlServer.Design": {
-      "version": "1.1.2",
-      "type": "build"
-    },
     "Microsoft.EntityFrameworkCore.Tools": {
       "version": "1.1.1",
       "type": "build"
@@ -45,7 +40,7 @@
       "type": "build"
     },
     "SapientGuardian.EntityFrameworkCore.MySql": "7.1.23",
-    "NonFactors.Grid.Mvc6": "2.0.0"
+    "NonFactors.Grid.Mvc6": "1.4.0"
   },
 
   "tools": {
@@ -63,9 +58,11 @@
   },
 
   "frameworks": {
-    "netcoreapp1.0": {
+    "netcoreapp1.1": {
       "imports": [
         "dotnet5.6",
+        "dnxcore50",
+        "dnx451",
         "portable-net45+win8"
       ]
     }
