@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{79A84EB2-CDE7-482C-86EE-969B4A62AF74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{299FB41E-EF5A-476D-A150-534B092075D3}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "LeadsWeb", "src\LeadsWeb\LeadsWeb.xproj", "{8EEBC08F-B9D9-45A4-9183-4167689428A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EEBC08F-B9D9-45A4-9183-4167689428A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EEBC08F-B9D9-45A4-9183-4167689428A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EEBC08F-B9D9-45A4-9183-4167689428A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EEBC08F-B9D9-45A4-9183-4167689428A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8EEBC08F-B9D9-45A4-9183-4167689428A1} = {79A84EB2-CDE7-482C-86EE-969B4A62AF74}
+	EndGlobalSection
+EndGlobal
