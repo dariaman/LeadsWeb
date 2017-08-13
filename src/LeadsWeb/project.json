@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-LeadsWeb-4840af8c-b8e3-4ae6-8a5a-0ddb3f8f39be",
 
   "dependencies": {
@@ -44,7 +44,8 @@
       "version": "1.1.1",
       "type": "build"
     },
-    "SapientGuardian.EntityFrameworkCore.MySql": "7.1.23"
+    "SapientGuardian.EntityFrameworkCore.MySql": "7.1.23",
+    "NonFactors.Grid.Mvc6": "2.0.0"
   },
 
   "tools": {
