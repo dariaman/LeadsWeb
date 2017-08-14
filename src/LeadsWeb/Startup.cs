@@ -52,7 +52,7 @@ namespace LeadsWeb
             services.AddMvcCore().AddViewLocalization();
             services.AddMvcGrid();
 
-            //services.AddDistributedMemoryCache();
+            services.AddDistributedMemoryCache();
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();

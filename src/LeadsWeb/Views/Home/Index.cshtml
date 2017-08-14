@@ -23,16 +23,16 @@
         columns.Add(model => model.RContact_Remark2).Titled("Remark2");
         columns.Add(model => model.IsReject).Titled("IsReject");
         columns.Add(model => model.RejectReason).Titled("RejectReason");
-        columns.Add(model => model.RContact_CreatedDate).Titled("CreatedDate");
+        columns.Add(model => model.RContact_CreatedDate).Titled("CreatedDate").Filterable(false);
         columns.Add(model => model.IsSent).Titled("IsSent");
-        columns.Add(model => model.ReturnSent).Titled("ResultSent");
+        //columns.Add(model => model.ReturnSent).Titled("ResultSent");
     }).Empty("No data found")
     .Pageable(pager =>
     {
         pager.PagesToDisplay = 10;
         pager.RowsPerPage = 10;
     })
-    //.Sortable()
+    .Sortable()
     .Filterable()
     .Css("table-hover")
 )

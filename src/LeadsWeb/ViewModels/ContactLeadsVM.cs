@@ -7,6 +7,7 @@ namespace LeadsWeb.ViewModels
 {
     public class ContactLeadsVM
     {
+        public int RContact_ID { get; set; }
         public string Source { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
